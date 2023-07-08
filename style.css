@@ -1,0 +1,858 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Create variables here : */
+:root{
+    --bg-color: ;
+    --second-bg-color: ;
+    --text-color: #01fff2 ;
+    --main-color: ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: rgb(27, 25, 25);
+    color: ghostwhite;
+    font-family: 'Poppins';
+}
+section{
+    padding: 5rem 10%;
+}
+span{
+    color: var(--text-color);
+}
+/* landing page */
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+    font-family: 'Poppins';
+}
+.navbar{
+    padding:20px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar img{
+    height: 50px;
+    vertical-align: middle;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: no-drop;
+}
+button{
+    color: rgb(14, 12, 12);
+    cursor: pointer;
+    background-color: #ffc501;
+    font-size: 16px;
+    padding:10px 15px;
+    border: none;
+    font-weight: 700;
+    box-shadow: -3px -2px 1px rgba(255, 255, 255, 0.664);
+}
+.landingpage{
+    width: 100%;
+    height: 91vh;
+    padding: 2rem 10%;
+    text-align: left;
+}
+.div1{
+    margin-top: 7%;
+}
+.div1 h1{
+    font-size: 10rem;
+    color: white;
+    line-height: 90px;
+    font-weight: 100;
+}
+.div1 h1 span{
+    font-weight: bolder;
+    color: #ffc501;
+}
+.div2 video{
+    width: 100%;
+    margin-top: 5%;
+    border-radius: 20px;
+
+}
+.div2 .seal{
+    position: absolute;
+    top: 400px;
+    right: 300px;
+}
+.div2 .seal img{
+    animation: rotating 10s linear infinite;
+    width: 133px;
+    animation-name: seal;
+    margin-left: 34rem;
+}
+@keyframes seal{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Scroll Animation Css ---------------------------------------------------------------------------*/
+
+#scrollpath{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.05);
+}
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0;
+    background: linear-gradient(to top, #ff00c8, #00ffe7);
+    animation: animate 5s linear infinite; 
+} 
+::-webkit-scrollbar{
+    width: 0;
+}
+@keyframes animate{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+#progressbar:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+#progressbar:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}
+
+/* Twitter Spaces Schedule CSS -------------------------------------------------------------------  */
+.twitter-box{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+.twitter-cards{
+    border-radius: 2rem;
+    background: #302e2e;
+    text-align: left;
+    width: 24vw;
+    display: block;
+    justify-content: center;
+    transition: 0.3s ease;
+    animation: fadeIn;
+    animation-duration: .5s;
+}
+.twitter-image{
+    margin-top: 2rem;
+    width: 20vw;
+    height: 23vh;
+    background-image: url('https://i.etsystatic.com/40274243/r/il/0fb1e8/4610173301/il_fullxfull.4610173301_9nmm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+    animation: fadeIn;
+    animation-duration: .5s;
+}
+.twitter-image-box{
+    display: flex;
+    justify-content: center;
+   
+}
+.twitter-card-content{
+    margin: 2.7rem ;
+    text-align: center;
+}
+.twitter-card-content h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.twitter-card-content h2{
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+.twitter-card-content h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+    /* animation: bounce;
+    animation-duration: 2s; */
+}
+.twitter-cards:hover{
+    transform: rotate(4deg);
+}
+
+/* Mentors Section Css */
+.mentors-container{
+    background-color: #121111;
+    padding: 5rem 20%;
+    background-image: url('https://img.freepik.com/free-vector/black-desktop-background-geometric-pattern-design-vector_53876-140229.jpg?w=1060&t=st=1688667584~exp=1688668184~hmac=c1a54e19fbd5c042312b81a7e6782816a896d1107a34d42cbd57a303107b071f');
+    background-size: cover;
+}
+.mentors-box{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+.mentor-image img{
+    height: 20vh;
+    border-radius: 4px;
+}
+
+/* Prizes Section Here */
+.prizes{
+    background-color: #111111;
+}
+.prize-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.prize-box1{
+    background-color: #1e1a1a;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 5rem;
+    animation: slideInLeft;
+    animation-duration: 1.5s;
+}
+.prize-box1 img{
+    height: 18vh;
+    margin: 2.5rem;
+}
+.prize-box1 h1{
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: rgb(255, 230, 7);
+}
+.prize-box1 h2{
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(0, 208, 255);
+}
+.prize-box1 h3{
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+.prize-card{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+    gap: 2rem;
+    align-items: center;
+    background-color: #1e1a1a;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+.prize-card img{
+    height: 6vh;
+    border-radius: 100%;
+}
+ /*  -------------------------------- Associate Partners ------------------------------------------- */
+.partners{
+    background: #0e0e0e;
+}
+.partners-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.partner-content{
+    border-radius: 2rem;
+    background: #1a1919;
+    padding: 1rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(46, 45, 45);
+}
+.partner-box2 img{
+    width: 32vw;
+    align-items: center;
+}
+.partner-content img{
+    height: 8vh;
+}
+
+/* -------------------------------------------Slider --------------------------------------*/
+.slider-box{
+    width: 80vw;
+    overflow: hidden;
+}
+.slider-images{
+    display: flex;
+    gap: 3rem;
+    animation: 20s slide infinite linear;
+    }
+.slider-images img{
+    height: 20vh;
+    border: 0.5px solid white;
+    border-radius: 2rem;
+}
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.slider-images2{
+    display: flex;
+    gap: 3rem;
+    animation: 20s slide2 infinite linear;
+    margin-top: 2rem;
+}
+.slider-images2 img{
+    height: 20vh;
+    border: 0.5px solid white;
+    border-radius: 2rem;
+}
+@keyframes slide2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+
+}
+.slider-images2 img:hover{
+    animation-play-state: paused;
+}
+
+/* ------------------------------Colour Changer--------------------------------------- */
+
+.theme-buttons{
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+.colour-change{
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+}
+.colour-box{
+    display: flex;
+}
+.meet{
+    background-color: #171616;
+}
+.meet-container{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.meet-box2{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.meet-box3{
+    padding: 0rem 20rem;
+    font-size: 1.3rem;
+}
+.google{
+    height: 6vh;
+}
+.zoom{
+    height: 4.5vh;
+}
+.meet-div{
+    width: 8vw;
+    height: 3vw;
+    display: flex;
+    padding: 1rem;
+    padding-right: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #302e2e;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+.btn-meet{
+    height: 5vh;
+    width: 10vw;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    background-color: var(--text-color);
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Create variables here : */
+:root{
+    --bg-color: ;
+    --second-bg-color: ;
+    --text-color: #01fff2 ;
+    --main-color: ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: rgb(27, 25, 25);
+    color: ghostwhite;
+    font-family: 'Poppins';
+}
+section{
+    padding: 5rem 10%;
+}
+span{
+    color: var(--text-color);
+}
+/* landing page */
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #202020;
+}
+.navbar{
+    padding:20px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'SUD';
+    position: sticky;
+    top: 0;
+    background-color: #202020;
+}
+.navbar img{
+    height: 50px;
+    vertical-align: middle;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: no-drop;
+}
+button{
+    color: black;
+    cursor: pointer;
+    background-color: #ffc501;
+    font-size: 16px;
+    padding:10px 15px;
+    border: none;
+    font-family: 'SUD';
+    font-weight: 700;
+    box-shadow: -3px -2px 1px rgba(255, 255, 255, 0.664);
+}
+.page1{
+    height: 91vh;
+    width: 100%;
+}
+.page1 img{
+    mix-blend-mode: color;
+}
+#canvas{
+    width: 100%;
+    height: 91vh;
+}
+
+/* Scroll Animation Css ---------------------------------------------------------------------------*/
+
+#scrollpath{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.05);
+}
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0;
+    background: linear-gradient(to top, #ff00c8, #00ffe7);
+    animation: animate 5s linear infinite; 
+} 
+::-webkit-scrollbar{
+    width: 0;
+}
+@keyframes animate{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+#progressbar:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+#progressbar:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}
+
+/* Twitter Spaces Schedule CSS -------------------------------------------------------------------  */
+.twitter-box{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.twitter-cards{
+    border-radius: 2rem;
+    background: #302e2e;
+    text-align: left;
+    width: 24vw;
+    display: block;
+    justify-content: center;
+    transition: 0.3s ease;
+    animation: fadeIn;
+    animation-duration: .5s;
+}
+.twitter-image{
+    margin-top: 2rem;
+    width: 20vw;
+    height: 23vh;
+    background-image: url('https://i.etsystatic.com/40274243/r/il/0fb1e8/4610173301/il_fullxfull.4610173301_9nmm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+    animation: fadeIn;
+    animation-duration: .5s;
+}
+.twitter-image-box{
+    display: flex;
+    justify-content: center;
+   
+}
+.twitter-card-content{
+    margin: 2.7rem ;
+}
+.twitter-card-content h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.twitter-card-content h2{
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+.twitter-card-content h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+    /* animation: bounce;
+    animation-duration: 2s; */
+}
+.twitter-cards:hover{
+    border: 2px solid #008aff;
+    transform: scale(1.05);
+}
+
+/* Mentors Section Css */
+.mentors-container{
+    background-color: #141414;
+    padding: 5rem 20%;
+}
+.mentors-box{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+.mentor-image img{
+    height: 20vh;
+    transition: 2.5s ease;
+    animation: flip;
+    animation-duration: 2s;
+    border-radius: 1rem;
+}
+.mentor-image img:hover{
+    border: 3px solid rgb(255, 255, 255);
+    transform: scale(1.2);
+    
+    animation-duration: 2s;
+}
+
+/* Prizes Section Here */
+.prizes{
+    background-color: #111111;
+}
+.prize-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.prize-box1{
+    background-color: #1e1a1a;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 3rem;
+    animation: slideInLeft;
+    animation-duration: 1.5s;
+}
+.prize-box1 img{
+    height: 18vh;
+    margin: 2.5rem;
+}
+.prize-box1 h1{
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: rgb(255, 230, 7);
+}
+.prize-box1 h2{
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(0, 208, 255);
+}
+.prize-box1 h3{
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+.prize-card{
+    display: flex;
+    justify-content: space-around;
+    padding: 2.5rem;
+    gap: 2rem;
+    align-items: center;
+    background-color: #1e1a1a;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    animation: slideInRight;
+    animation-duration: 1.5s;
+}
+.prize-card img{
+    height: 6vh;
+    border-radius: 100%;
+}
+ /*  -------------------------------- Associate Partners ------------------------------------------- */
+.partners{
+    background: #0e0e0e;
+}
+.partners-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.partner-content{
+    border-radius: 2rem;
+    background: #1a1919;
+    padding: 1rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(46, 45, 45);
+}
+.partner-box2 img{
+    width: 32vw;
+    align-items: center;
+}
+.partner-content img{
+    height: 8vh;
+}
+
+/* -------------------------------------------Slider --------------------------------------*/
+.slider-box{
+    width: 80vw;
+}
+.slider-images{
+    display: flex;
+    gap: 3rem;
+    animation: 20s slide infinite linear;
+    
+}
+.slider-images img{
+    height: 20vh;
+}
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.slider-images2{
+    display: flex;
+    gap: 3rem;
+    animation: 20s slide2 infinite linear;
+    margin-top: 2rem;
+}
+.slider-images2 img{
+    height: 20vh;
+}
+@keyframes slide2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+
+}
+.slider-images2 img:hover{
+    animation-play-state: paused;
+}
+
+/* ------------------------------Colour Changer--------------------------------------- */
+
+.theme-buttons{
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+.colour-change{
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+}
+.colour-box{
+    display: flex;
+}
+.meet{
+    background-color: #171616;
+    background-image: url('images/tv.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 24rem;
+    background-position-x: 6rem;
+}
+.meet-container{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+.meet-box2{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.meet-box3{
+    padding: 0rem 20rem;
+    font-size: 1.3rem;
+}
+.google{
+    height: 6vh;
+}
+.zoom{
+    height: 4.5vh;
+}
+.meet-div{
+    width: 8vw;
+    height: 3vw;
+    display: flex;
+    padding: 1rem;
+    padding-right: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #302e2e;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+.btn-meet{
+    height: 5vh;
+    width: 10vw;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    background-color: var(--text-color);
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
