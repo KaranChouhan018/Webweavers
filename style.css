@@ -120,17 +120,6 @@ button{
         transform: rotate(360deg);
     }
 }
-@keyframes seal{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
 /* page 1 --------*/
 .page1{
     width: 100%;
