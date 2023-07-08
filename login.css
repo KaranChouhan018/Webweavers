@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Create variables here : */
+:root{
+    --bg-color: ;
+    --second-bg-color: ;
+    --text-color: #01fff2 ;
+    --main-color: #000 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: rgb(27, 25, 25);
+    color: ghostwhite;
+    font-family: 'Poppins';
+}
+section{
+    padding: 5rem 10%;
+}
+span{
+    color: var(--text-color);
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color:  rgb(27, 25, 25);
+}
+.navbar{
+    padding:20px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar img{
+    height: 50px;
+    vertical-align: middle;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    text-align: center;
+
+    cursor: no-drop;
+}
+button{
+    color: rgb(14, 12, 12);
+    cursor: pointer;
+    background-color: #ffc501;
+    font-size: 16px;
+    padding:10px 15px;
+    border: none;
+    font-weight: 700;
+    box-shadow: -3px -2px 1px rgba(255, 255, 255, 0.664);
+}
+.landingpage{
+    width: 100%;
+    height: 100vh;
+    padding: 3rem 10px;
+}
